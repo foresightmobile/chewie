@@ -284,19 +284,20 @@ class _CupertinoControlsState extends State<CupertinoControls> {
   ) {
     return GestureDetector(
       onTap: _playPause,
+      behavior: HitTestBehavior.opaque,
       child: Container(
         height: barHeight,
         color: Colors.transparent,
         padding: EdgeInsets.only(
-          left: 6.0,
-          right: 6.0,
+          left: 12.0,
+          right: 8.0,
         ),
         child: Icon(
           controller.value.isPlaying
               ? OpenIconicIcons.mediaPause
               : OpenIconicIcons.mediaPlay,
           color: iconColor,
-          size: 16.0,
+          size: 20.0,
         ),
       ),
     );
